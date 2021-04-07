@@ -1,5 +1,5 @@
 # CodeWars
-This is a repo for the Solved CodeWars Problems 
+This is a repo for the Solved CodeWars Problems on JavaScript 🐱 💻 👍
 
 `print('hello CodeWars')`
 
