@@ -6,6 +6,7 @@ This is a repo for the Solved CodeWars Problems on JavaScript 🐱 💻 👍
 - [x] 8Kyu
 - [x] 7Kyu
 - [x] 6Kyu
-- [ ] 5Kyu
+- [x] 5Kyu
+- [ ] 4Kyu
 
 ![alt text](https://jungladigital.com/wp-content/uploads/2019/03/codewars-800-350.png)
