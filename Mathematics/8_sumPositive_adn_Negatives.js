@@ -2,7 +2,7 @@
 
 //Parameters : Array
 //Result: Array 
-//Example: [1,2,-1,-2]--> [3,-3]
+//Example: [1,2,-1,-2]--> [2,-3]
 
 function countPositivesSumNegatives(input) {
   if(  !input  )
