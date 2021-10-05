@@ -1,12 +1,10 @@
-function isTriangle(a, b, c) {
-    // Check invalid values
-    if (a <= 0 || b <= 0 || c <= 0)
-        return false;
-    // Check formula
-    if (a + b > c)
-        if (a + c > b)
-            if (b + c > a)
-                return true;
-    return false;
+function countBits(n) {
+    let total = 0;
+    // transform decimal-number to binary
+    let bin_str = n.toString(2);
+    // count up bits
+    for (let bit of bin_str)
+        if (bit == '1')
+            total += 1;
+    return total;
 }
-console.log(isTriangle(1, 1, 2));
