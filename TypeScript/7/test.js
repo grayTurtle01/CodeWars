@@ -1,18 +1,12 @@
-function getSum(a, b) {
-    let sum = 0;
-    let min;
-    let max;
-    if (a <= b) {
-        min = a;
-        max = b;
-    }
-    else {
-        min = b;
-        max = a;
-    }
-    for (let i = min; i <= max; i++) {
-        sum += i;
-    }
-    return sum;
+function isTriangle(a, b, c) {
+    // Check invalid values
+    if (a <= 0 || b <= 0 || c <= 0)
+        return false;
+    // Check formula
+    if (a + b > c)
+        if (a + c > b)
+            if (b + c > a)
+                return true;
+    return false;
 }
-console.log(getSum(5, 5));
+console.log(isTriangle(1, 1, 2));
