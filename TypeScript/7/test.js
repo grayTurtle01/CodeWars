@@ -1,19 +1,18 @@
-"use strict";
-exports.__esModule = true;
-exports.xo = void 0;
-function xo(str) {
-    var x = 0;
-    var o = 0;
-    var char_array = str.split('');
-    for (var _i = 0, char_array_1 = char_array; _i < char_array_1.length; _i++) {
-        var char = char_array_1[_i];
-        if (char.toLowerCase() == 'x')
-            x += 1;
-        else if (char.toLowerCase() == 'o')
-            o += 1;
+function getSum(a, b) {
+    let sum = 0;
+    let min;
+    let max;
+    if (a <= b) {
+        min = a;
+        max = b;
     }
-    if (x == o)
-        return true;
-    return false;
+    else {
+        min = b;
+        max = a;
+    }
+    for (let i = min; i <= max; i++) {
+        sum += i;
+    }
+    return sum;
 }
-exports.xo = xo;
+console.log(getSum(5, 5));
