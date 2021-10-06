@@ -1,4 +1,7 @@
-function findOutlier(integers) {
+function iqTest(numbers) {
+    // String numbers to Array numbers
+    let integers = numbers.split(' ').map((str_num) => parseInt(str_num));
+    console.log(integers);
     let isEvenArray = false;
     // Find the kind of array
     if (integers[0] % 2 == 0 && integers[1] % 2 == 0)
@@ -7,14 +10,20 @@ function findOutlier(integers) {
         isEvenArray = true;
     if (integers[1] % 2 == 0 && integers[2] % 2 == 0)
         isEvenArray = true;
-    // Search the outlier
+    // Search the outlier index
+    let index;
     for (let i = 0; i < integers.length; i++) {
         if (isEvenArray)
-            if (Math.abs(integers[i] % 2) == 1)
-                return integers[i];
+            if (Math.abs(integers[i] % 2) == 1) {
+                index = i;
+                break;
+            }
         if (!isEvenArray)
-            if (integers[i] % 2 == 0)
-                return integers[i];
+            if (integers[i] % 2 == 0) {
+                index = i;
+                break;
+            }
     }
+    return index + 1;
 }
-console.log(findOutlier([2, -6, 8, -10, -3]));
+console.log(iqTest("0 0 0 1 2"));
