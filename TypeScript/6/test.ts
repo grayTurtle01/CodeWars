@@ -1,16 +1,23 @@
-import { MORSE_CODE } from './preloaded';
-export function decodeMorse(morseCode: string): string {
-  let words:string[] = morseCode.split("   ")
-  let message:string = ""
-  
-  for(let word of words){
-    let letters:string[] = word.split(" ")
-    for( let letter of letters ){
-      if( letter != '')
-        message += MORSE_CODE[letter]
-    }
-    message += " "  
-  }
+function narcissistic(value: number): boolean {
+  // get digits
+  let digits:string[] = value.toString().split("")
 
-  return message.trim()
+  // sum values
+  let total:number = 0;
+  let power:number = digits.length
+
+  digits.forEach( (digit) => {
+    let base:number = parseInt(digit);
+
+    total += base**power 
+  })
+
+  // check result
+  if( total == value )
+    return true
+
+
+  return false;
 }
+
+console.log(narcissistic(153))
