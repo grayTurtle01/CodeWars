@@ -1,5 +1,4 @@
 # Show all the squares inside rectangle's area
-
 def sqInRect(lng, wdth):
 
     # trivial case
