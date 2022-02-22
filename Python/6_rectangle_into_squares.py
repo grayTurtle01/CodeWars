@@ -1,20 +1,27 @@
+# Show all the squares inside rectangle's area
 
+def sqInRect(lng, wdth):
 
-def sqInRect_easy(lng, wdth):
+    # trivial case
+    if lng == wdth:
+        return None
+    
     area = lng * wdth
+    lengths = []
 
-    squares = []
-
-    while area > 1:
-        for l in range(1, area+1):
-            if l*l  > area:
-                area = area - (l-1)**2
-                squares.append(l-1)
-                break
-
-    if area == 1:
-        squares.append(1)
+    while area >= 1:
+        if lng <= wdth:
+            short = lng
+            wdth -= short
+        else:
+            short = wdth
+            lng -= short
             
-    return squares
+        area = area - short**2
+        
+        lengths.append(short)
 
-print(sqInRect(20, 14))
+            
+    return lengths
+
+print(sqInRect(3, 5))
