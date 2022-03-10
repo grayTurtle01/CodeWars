@@ -42,6 +42,8 @@ def is_redundant(dir1, dir2):
 
     return False
 
+
+
 dirReduc(["NORTH", "WEST", "SOUTH", "EAST"])
 
 
