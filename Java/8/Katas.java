@@ -28,9 +28,11 @@ public class Katas {
         return result;
     }
 
-    public static void main(String args[]){
-        String s = removeExclamationMarks("hello ! world");
-        System.out.println(s);
+     public static int multiply(int x, int y){
+        return x * y;
+    }
 
+    public static void main(String args[]){
+        System.out.println(multiply(7,8));
     }
 }
