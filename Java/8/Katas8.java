@@ -57,8 +57,21 @@ public class Katas8 {
         return result;
     }
 
+    public static String fakeBin(String numberString) {
+        String result = "";
+        for(int i = 0; i < numberString.length(); i++){
+            char digit = numberString.charAt(i);
+            if( digit  < '5')
+                result += '0';
+            else
+                result += '1';
+            
+        }
+        
+        return result;
+    }
 
     public static void main(String args[]){
-        System.out.println( toAlternativeString("abcABC123abc**ABC"));
+        System.out.println( fakeBin("1234567890"));
     }
 }
