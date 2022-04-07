@@ -39,7 +39,26 @@ public class Katas {
           return false;
     }
 
+    public static String toAlternativeString(String string) {
+    // your code here!
+        String result = "";
+        for(int i = 0; i < string.length(); i++){
+            char c = string.charAt(i);
+            if( Character.isLowerCase(c) ){
+                c = Character.toUpperCase(c);
+            }
+            else if( Character.isUpperCase(c) ){
+                c = Character.toLowerCase(c);
+            }
+
+            result += c;
+        }
+
+        return result;
+    }
+
+
     public static void main(String args[]){
-        System.out.println(multiply(7,8));
+        System.out.println( toAlternativeString("abcABC123abc**ABC"));
     }
 }
