@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Katas {
+public class Katas8 {
 
     public static long[] powerOfTwo(int n) {
         long powers[] = new long[n+1];
