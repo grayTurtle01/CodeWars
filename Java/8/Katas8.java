@@ -28,7 +28,7 @@ public class Katas8 {
         return result;
     }
 
-     public static int multiply(int x, int y){
+    public static int multiply(int x, int y){
         return x * y;
     }
 
@@ -70,6 +70,14 @@ public class Katas8 {
         
         return result;
     }
+
+    public static boolean isDivisible(long n, long x, long y) {
+        // your code
+        if( n % x == 0 && n % y == 0)
+          return true;
+        
+        return false;
+	}
 
     public static void main(String args[]){
         System.out.println( fakeBin("1234567890"));
