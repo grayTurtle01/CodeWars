@@ -78,9 +78,10 @@ public class Katas7{
     }
 
     public static void main(String[] args){
-        int v[] = {-2068924544};
+        int v[] = {1,2,-1,5,-2};
+        Arrays.sort(v);
         
-        System.out.println(Arrays.toString( minMax( v ) ));
+        System.out.println(Arrays.toString(  v ));
        
     }
 }
