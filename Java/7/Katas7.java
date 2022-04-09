@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Katas7{
     
     public static long triangular(long n){
@@ -51,9 +53,34 @@ public class Katas7{
         return result;
     }
 
-    public static void main(String[] args){
-        System.out.println(printerError("aaaxbbbbyyhwawiwjjjwwm"));
+    public static int[] minMax(int[] arr) {
+        // Your awesome code here
+        int min = (int)Math.pow(2,31);
+        int max = -(int)Math.pow(2,31);
+
+
+        for(int i = 0; i < arr.length; i++){
+            int x = arr[i];
+
+            if( x < min){
+                min = x;
+            }
+
+            if ( x > max){
+                max = x;
+            }
+
+        }
         
+        int result[] = {min, max}; 
+        
+        return result;
+    }
+
+    public static void main(String[] args){
+        int v[] = {-2068924544};
+        
+        System.out.println(Arrays.toString( minMax( v ) ));
        
     }
 }
