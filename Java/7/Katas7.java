@@ -35,8 +35,25 @@ public class Katas7{
 
     }
 
+    public static String printerError(String s) {
+        int length = s.length();
+        char c;
+        int errors = 0;
+
+        for(int i = 0; i < length; i++){
+            c = s.charAt(i);
+            if( c > 'm')
+                errors++;
+        }
+
+        String result = errors + "/" +length;
+        
+        return result;
+    }
+
     public static void main(String[] args){
-        System.out.println( prevMultOfThree(145) );
+        System.out.println(printerError("aaaxbbbbyyhwawiwjjjwwm"));
+        
        
     }
 }
