@@ -77,6 +77,22 @@ public class Katas7{
         return result;
     }
 
+    public static int predictAge(int age1, int age2, int age3, int age4, int age5, int age6, int age7, int age8) {
+        // your code goes here
+        int[] ages = {age1, age2, age3, age4, age5, age6, age7, age8  };
+      
+        int result = 0;
+        for(int i = 0; i < ages.length; i++){
+          result += ages[i] * ages[i];
+          
+        }
+        result = (int)Math.sqrt(result);
+        result = (int)(result/2);
+        
+        return result;
+      
+    }
+
     public static void main(String[] args){
         int v[] = {1,2,-1,5,-2};
         Arrays.sort(v);
@@ -84,4 +100,6 @@ public class Katas7{
         System.out.println(Arrays.toString(  v ));
        
     }
+
+    
 }
