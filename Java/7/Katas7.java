@@ -93,6 +93,14 @@ public class Katas7{
       
     }
 
+    public static int largestPairSum(int[] numbers){
+        // your code here
+        Arrays.sort(numbers);
+        int n = numbers.length;
+      
+        return numbers[n-1] + numbers[n-2];
+    }
+
     public static void main(String[] args){
         int v[] = {1,2,-1,5,-2};
         Arrays.sort(v);
