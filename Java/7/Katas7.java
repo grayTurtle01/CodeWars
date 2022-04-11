@@ -101,11 +101,20 @@ public class Katas7{
         return numbers[n-1] + numbers[n-2];
     }
 
-    public static void main(String[] args){
-        int v[] = {1,2,-1,5,-2};
-        Arrays.sort(v);
+    public static String reverseLetter(final String str) {
+        String result = "";
         
-        System.out.println(Arrays.toString(  v ));
+        for(int i = str.length()-1;  i >= 0; i --){
+            char c = str.charAt(i);
+            if( Character.isLetter(c) )
+                result += c;
+        }
+        
+        return result; 
+    }
+
+    public static void main(String[] args){
+        System.out.println(reverseLetter("hello123world"));
        
     }
 

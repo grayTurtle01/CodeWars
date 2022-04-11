@@ -28,7 +28,8 @@ public class Katas6{
 
 
   public static void main(String args[]){
-      TowerBuilder(6);
+      String s = "*";
+      System.out.println( s.repeat(1) );
   }
   
 }
