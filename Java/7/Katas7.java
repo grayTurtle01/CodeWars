@@ -164,9 +164,13 @@ public class Katas7{
     return result;
   }
 
+    public static int sumOfAngles(int n) {
+    // Code here
+        return 180 * (n-2);
+    }
 
     public static void main(String[] args){
-      System.out.println(calculate(-1,"*",0));
+      System.out.println(sumOfAngles(3));
        
     }
 
