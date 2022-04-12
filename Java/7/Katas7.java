@@ -169,8 +169,23 @@ public class Katas7{
         return 180 * (n-2);
     }
 
+    public static long maxProduct(int[] numbers, int sub_size){
+        long result = 1;
+
+        Arrays.sort(numbers);
+        int n = numbers.length;
+        
+        for(int i = n-1; i >= n-sub_size; i-- ){
+            result *=  numbers[i];
+        }
+
+        return result;
+    }
+
     public static void main(String[] args){
-      System.out.println(sumOfAngles(3));
+      int[] v = {1,2,10,2,20};  
+        
+      System.out.println( maxProduct(v,2) );
        
     }
 
