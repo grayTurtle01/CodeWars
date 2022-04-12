@@ -129,11 +129,44 @@ public class Katas7{
         return result; 
     }
 
+    public static Double calculate(final double numberOne, final String operation, final double numberTwo){
+        Double result = null;
+
+        switch(operation){
+            
+            case "+":
+                result = numberOne + numberTwo;
+                break;
+                
+            case "-":
+                result = numberOne - numberTwo;
+                break;
+
+            case "*":
+                if( numberOne == 0 || numberTwo == 0 )
+                    return 0.0;
+                    
+                result = numberOne * numberTwo;
+                break;
+
+            case "/":
+                if( numberTwo == 0){
+                    result = null;
+                    break;
+                }
+                result = numberOne / numberTwo;
+                break;
+
+            default:
+                result = null;
+    }
+
+    return result;
+  }
+
+
     public static void main(String[] args){
-       int[] v = {1,2,3,4}; 
-       int r = minSum(new int[]{5,4,2,3});
-        
-       System.out.println( r );
+      System.out.println(calculate(-1,"*",0));
        
     }
 
