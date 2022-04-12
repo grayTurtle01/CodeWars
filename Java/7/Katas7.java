@@ -113,8 +113,27 @@ public class Katas7{
         return result; 
     }
 
+    public static int minSum(int[] passed){
+        Arrays.sort(passed);
+        System.out.println(Arrays.toString(passed));
+        int result = 0;
+
+        
+        int n = passed.length;
+            
+        for(int i = 0; i < n/2; i++){
+            result += passed[i] * passed[n-1-i];
+            System.out.println(result);
+        }
+        
+        return result; 
+    }
+
     public static void main(String[] args){
-        System.out.println(reverseLetter("hello123world"));
+       int[] v = {1,2,3,4}; 
+       int r = minSum(new int[]{5,4,2,3});
+        
+       System.out.println( r );
        
     }
 
