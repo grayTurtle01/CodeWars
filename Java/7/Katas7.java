@@ -212,8 +212,10 @@ public class Katas7{
 
 
     public static void main(String[] args){
-      String[] arr = {"uno", "dos", "tres"};
-      partlist(arr); 
+        String[] v = {"uno", "dos", "tres"};
+        
+        String s = String.join("-", v);
+        System.out.println(s);
     }
 
     
