@@ -182,11 +182,38 @@ public class Katas7{
         return result;
     }
 
+    public static String[][] partlist(String[] arr) {
+        String[][] result = new String[arr.length-1][];
+
+        String left = "";
+        String right = "";
+
+        for(int i = 0; i < arr.length-1; i++){
+            left = "";
+            right = "";
+
+            for(int x = 0;  x <= i; x++ ){
+                left += arr[x] + " ";
+            }
+
+            for(int y = i + 1;  y < arr.length; y++){
+                right += arr[y] + " ";
+            }
+
+            left = left.trim();
+            right = right.trim();
+
+            result[i] = new String[]{left, right};
+
+        }
+
+        return result;
+    }
+
+
     public static void main(String[] args){
-      int[] v = {1,2,10,2,20};  
-        
-      System.out.println( maxProduct(v,2) );
-       
+      String[] arr = {"uno", "dos", "tres"};
+      partlist(arr); 
     }
 
     
