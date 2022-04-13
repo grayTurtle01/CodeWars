@@ -210,11 +210,29 @@ public class Katas7{
         return result;
     }
 
+    public static String switcheroo(String x) {
+        String result = "";
+
+        for(int i = 0; i < x.length(); i++){
+            char c = x.charAt(i);
+            
+            if( c == 'a')
+                result += 'b';
+    
+            else if( c == 'b')
+                result += 'a';
+                
+            else
+                result += c;
+            
+        }
+        
+        return result;
+    }
 
     public static void main(String[] args){
-        String[] v = {"uno", "dos", "tres"};
+        String s = switcheroo("acb");
         
-        String s = String.join("-", v);
         System.out.println(s);
     }
 
