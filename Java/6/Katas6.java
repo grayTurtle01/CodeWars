@@ -1,28 +1,29 @@
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Katas6{
     
     public static String[] TowerBuilder(int nFloors){
-    String[] result = new String[nFloors];
-    int spaces = nFloors - 1;
+        String[] result = new String[nFloors];
+        int spaces = nFloors - 1;
 
-    for(int y = 0; y < nFloors; y++ ){
-        String floor = "";
-        int blocks = y*2 + 1;
+        for(int y = 0; y < nFloors; y++ ){
+            String floor = "";
+            int blocks = y*2 + 1;
 
-        for( int x = 1; x <= spaces; x++)
-            floor += " ";
+            for( int x = 1; x <= spaces; x++)
+                floor += " ";
 
-        for( int x = 1; x <= blocks; x++)
-            floor += "*";
+            for( int x = 1; x <= blocks; x++)
+                floor += "*";
 
-        for( int x = 1; x <= spaces; x++)
-            floor += " ";
-        
-        //~ System.out.println(floor);
-        result[y] = floor;
+            for( int x = 1; x <= spaces; x++)
+                floor += " ";
+            
+            //~ System.out.println(floor);
+            result[y] = floor;
 
-        spaces--;
+            spaces--;
     }
 
     return result;
@@ -49,11 +50,36 @@ public class Katas6{
         return null;
     }
 
+    public static String[] inArray(String[] array1, String[] array2) {
+
+        Arrays.sort(array1);
+        
+        ArrayList<String> result = new ArrayList<String>();
+
+         for(String pivot : array1){
+            for(String crawler: array2){
+                if( crawler.contains(pivot) ){
+                    result.add(pivot);
+                    break;
+                }
+            }
+          }    
+          int n = result.size();
+          String[] r = new String[n];  
+          
+          for(int i = 0; i < n; i++){
+            r[i] = result.get(i);
+          }  
+            
+        return r;
+	}
+
 
     public static void main(String args[]){
-       int[] v = {1,2,3};
-       int[] r = twoSum(v, 4);
-       System.out.println(Arrays.toString(r));
+        String[] v1 = {"hell", "java", "html" ,"script", "action"}; 
+        String[] v2 = {"hello", "javascript", "actionscript", "python"}; 
+        String[] r =  inArray(v1, v2);
+        System.out.println(Arrays.toString(r));
     }
   
 }
