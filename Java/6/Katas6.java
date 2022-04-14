@@ -70,11 +70,41 @@ public class Katas6{
         return r;
 	}
 
+    public static String[] wave(String str) {
+        ArrayList<String> lista = new ArrayList<String>();
+
+        String[] characters = str.split("");
+        boolean no_letter = false;
+        
+        for(int i = 0; i < str.length(); i++){
+            String word = "";
+            no_letter = false;
+            for(int j = 0; j < str.length(); j++){
+                char c = str.charAt(j);
+                
+                if( i == j ){
+                    c = Character.toUpperCase(c);
+                    if( Character.isLetter(c) == false )
+                        no_letter = true;
+                        
+                }
+    
+                word += c;
+            }
+            if( no_letter == false)
+                lista.add(word);
+            else
+                no_letter = true;
+        }
+
+        String[] result = lista.toArray( new String[lista.size()] );
+        
+        return result;
+    }
+
 
     public static void main(String args[]){
-        String[] v1 = {"hell", "java", "html" ,"script", "action"}; 
-        String[] v2 = {"hello", "javascript", "actionscript", "python"}; 
-        String[] r =  inArray(v1, v2);
+        String[] r = wave("two words");
         System.out.println(Arrays.toString(r));
     }
   
