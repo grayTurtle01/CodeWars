@@ -73,28 +73,18 @@ public class Katas6{
     public static String[] wave(String str) {
         ArrayList<String> lista = new ArrayList<String>();
 
-        String[] characters = str.split("");
-        boolean no_letter = false;
-        
         for(int i = 0; i < str.length(); i++){
-            String word = "";
-            no_letter = false;
-            for(int j = 0; j < str.length(); j++){
-                char c = str.charAt(j);
-                
-                if( i == j ){
-                    c = Character.toUpperCase(c);
-                    if( Character.isLetter(c) == false )
-                        no_letter = true;
-                        
-                }
-    
-                word += c;
+            
+            String left = str.substring(0,i);
+            char c = str.charAt(i);
+            String right = str.substring(i+1);
+
+            if( Character.isLetter(c) ){
+               c = Character.toUpperCase(c); 
+               String word = left + c + right;
+               lista.add(word); 
             }
-            if( no_letter == false)
-                lista.add(word);
-            else
-                no_letter = true;
+
         }
 
         String[] result = lista.toArray( new String[lista.size()] );
