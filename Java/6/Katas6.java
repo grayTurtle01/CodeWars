@@ -64,12 +64,8 @@ public class Katas6{
                 }
             }
           }    
-          int n = result.size();
-          String[] r = new String[n];  
-          
-          for(int i = 0; i < n; i++){
-            r[i] = result.get(i);
-          }  
+         
+        String[] r = result.toArray(new String[result.size()]);  
             
         return r;
 	}
