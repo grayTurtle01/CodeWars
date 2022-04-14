@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Katas6{
     
   public static String[] TowerBuilder(int nFloors){
@@ -26,10 +28,31 @@ public class Katas6{
     return result;
   }
 
+    public static int[] twoSum(int[] numbers, int target){
+        int[] result = new int[2];
+        int n = numbers.length;
 
-  public static void main(String args[]){
-      String s = "*";
-      System.out.println( s.repeat(1) );
-  }
+        for(int i = 0; i < n-1; i++){
+            int pivot = numbers[i];
+
+            for(int j = i+1; j < n; j++){
+                int crawler = numbers[j];
+
+                if( (pivot + crawler) == target){
+                    result = new int[]{ i, j};
+                    return result;
+                }
+            }
+        }
+        
+        return null;
+    }
+
+
+    public static void main(String args[]){
+       int[] v = {1,2,3};
+       int[] r = twoSum(v, 4);
+       System.out.println(Arrays.toString(r));
+    }
   
 }
