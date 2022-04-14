@@ -93,7 +93,15 @@ public class Katas8 {
     
     }
 
+    public static char getChar(int c) {
+        char character = (char)c;
+        return character;
+    }
+
     public static void main(String args[]){
-        System.out.println( fakeBin("1234567890"));
+        System.out.println( getChar(65));
+
+        System.out.println((int)'a');
+        System.out.println((int)'z');
     }
 }

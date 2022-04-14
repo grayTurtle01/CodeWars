@@ -2,10 +2,10 @@ import java.util.Arrays;
 
 public class Katas6{
     
-  public static String[] TowerBuilder(int nFloors){
+    public static String[] TowerBuilder(int nFloors){
     String[] result = new String[nFloors];
     int spaces = nFloors - 1;
-    
+
     for(int y = 0; y < nFloors; y++ ){
         String floor = "";
         int blocks = y*2 + 1;
@@ -26,7 +26,8 @@ public class Katas6{
     }
 
     return result;
-  }
+    }
+
 
     public static int[] twoSum(int[] numbers, int target){
         int[] result = new int[2];
