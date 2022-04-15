@@ -93,9 +93,31 @@ public class Katas6{
     }
 
 
+    public static String iterPi2String(Double epsilon) {
+
+         Double quarter_pi = 0.0;
+         Double pi = 4.0;
+
+         int i = 0;
+         int k = 1;   
+             
+         while( (Math.abs(Math.PI - pi)) > epsilon ){
+             
+            if( i % 2 == 0)
+                quarter_pi += 1.0/(k);
+            else
+                quarter_pi -= 1.0/(k);
+                
+            pi = 4 * quarter_pi;
+            
+            i++;
+            k += 2;
+         }   
+            
+         return String.format("[%d, %.10f]", i, pi);
+	}
     public static void main(String args[]){
-        String[] r = wave("two words");
-        System.out.println(Arrays.toString(r));
+        iterPi2String(0.1);
     }
   
 }
