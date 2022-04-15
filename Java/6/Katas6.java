@@ -116,9 +116,32 @@ public class Katas6{
             
          return String.format("[%d, %.10f]", i, pi);
 	}
+
+    public static double areaOfPolygonInsideCircle(double circleRadius, int numberOfSides) {
+        double r = circleRadius;
+        int n = numberOfSides;
+
+        int internal_angles = (n-2) * 180;
+        double polygon_angle = 1.0*internal_angles/n;
+        double triangle_angle = polygon_angle/2.0;
+        double teta = 180 - 2.0*triangle_angle;
+
+        double triangle_area = r*r * Math.sin( Math.toRadians(teta) )/ 2.0;
+
+        double area = n * triangle_area;
+        
+    // Your code here
+    String s = String.format("%.3f", area);
+    area = Double.parseDouble(s);
+    return area;
+  }
+
     
     public static void main(String args[]){
-        iterPi2String(0.1);
+       System.out.println(areaOfPolygonInsideCircle(3,3));
+       System.out.println(areaOfPolygonInsideCircle(4,5));
+       //~ System.out.println(Math.toRadians( 180 )); 
+       
     }
   
 }
