@@ -116,6 +116,7 @@ public class Katas6{
             
          return String.format("[%d, %.10f]", i, pi);
 	}
+    
     public static void main(String args[]){
         iterPi2String(0.1);
     }
