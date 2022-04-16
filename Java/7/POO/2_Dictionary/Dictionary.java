@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Dictionary{
     ArrayList<String> keys = new ArrayList<String>();
@@ -22,11 +24,9 @@ public class Dictionary{
     }
     
     public static void main(String[] args){
-        Dictionary d = new Dictionary();
+        Map<String, String> dic = new HashMap<>();
 
-        d.newEntry("k1", "v1");
-        d.newEntry("k2", "v2");
-
-        System.out.println(d.look("k3"));
+        dic.put("k1", "v1");
+        System.out.println(dic.get("k1"));
     }
 }
