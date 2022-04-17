@@ -5,17 +5,14 @@ public class Backronym {
   private static Map<String, String> dictionary = Preload.dictionary;
   
   public static String makeBackronym(String acronym) {
-    String result = "";
-    String C = "";
-      
+    String result = acronym.toUpperCase();
+    char c;
+    
     for(int i = 0; i < acronym.length(); i++){
-      C = "";
       char c = acronym.charAt(i);
-      c = Character.toUpperCase(c);
-      C += c;
-      String word = dictionary.get( C );
+      String key =  Character.toString(c);
+      String word = dictionary.get( key );
      
-      
       result += word + " ";  
     }    
 
