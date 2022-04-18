@@ -98,10 +98,28 @@ public class Katas8 {
         return character;
     }
 
-    public static void main(String args[]){
-        System.out.println( getChar(65));
+     public static int[] squareOrSquareRoot(int[] array){
 
-        System.out.println((int)'a');
-        System.out.println((int)'z');
+        for(int i = 0; i < array.length; i++){
+            int x = array[i];
+
+            double root = Math.sqrt(x);
+            int root_int = (int)root; 
+
+            double delta = root - root_int;
+
+            if( delta > 0.001)
+                array[i] *= array[i];
+            else
+                array[i] = root_int;
+            
+        } 
+        return array;
+    }
+
+    public static void main(String args[]){
+        int[] v = {4,2,1,9,3};
+        v = squareOrSquareRoot(v);
+        System.out.println(Arrays.toString(v));
     }
 }
