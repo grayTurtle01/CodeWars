@@ -104,14 +104,11 @@ public class Katas8 {
             int x = array[i];
 
             double root = Math.sqrt(x);
-            int root_int = (int)root; 
-
-            double delta = root - root_int;
-
-            if( delta > 0.001)
-                array[i] *= array[i];
+          
+            if( root % 1 == 0)
+                array[i] = (int)root;
             else
-                array[i] = root_int;
+                array[i] *= array[i];
             
         } 
         return array;
