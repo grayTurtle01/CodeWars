@@ -14,7 +14,7 @@ class Song{
     public String getTitle(){ return title; }
     public String getArtist(){ return artist; }
 
-    public int howMany(String[] names ){
+    public int howMany(ArrayList<String> names ){
         int new_people = 0;
         
         for(String name : names){
@@ -27,19 +27,21 @@ class Song{
         
         return new_people;   
     }
+    
 }
 
 public class App{
 
     public static void main(String[] args){
         Song s = new Song("Money", "Pink Floyd");
-        //~ System.out.println(s.getTitle());
+       
+        ArrayList<String> lista = new ArrayList<String>();
+        lista.add("uno");
+        lista.add("dos");
+        lista.add("Dos");
+        lista.add("Tres");
 
-        String[] names = {"ana", "bob", "John", "john"};
-        System.out.println(s.howMany( names ));
-        
-        System.out.println(s.howMany( new String[]{"pep", "ana", "boby"} ));
-
+        System.out.println(s.howMany(lista));
     
         
     }
