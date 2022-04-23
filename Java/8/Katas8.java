@@ -98,7 +98,7 @@ public class Katas8 {
         return character;
     }
 
-     public static int[] squareOrSquareRoot(int[] array){
+    public static int[] squareOrSquareRoot(int[] array){
 
         for(int i = 0; i < array.length; i++){
             int x = array[i];
@@ -112,6 +112,23 @@ public class Katas8 {
             
         } 
         return array;
+    }
+
+    public static String bmi(double weight, double height) {
+        double bmi = weight / (height * height);
+
+        if( bmi <= 18.5 )
+            return "Underweight";
+        if( bmi <= 25.5 )
+            return "Normal";
+        if( bmi <= 30.0 )
+            return "Overweight";
+        if( bmi > 30.0 )
+            return "Obese";
+        
+        
+        
+        return "";
     }
 
     public static void main(String args[]){
