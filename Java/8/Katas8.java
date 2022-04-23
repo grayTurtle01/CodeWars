@@ -126,9 +126,6 @@ public class Katas8 {
         if( bmi > 30.0 )
             return "Obese";
         
-        
-        
-        return "";
     }
 
     public static void main(String args[]){
