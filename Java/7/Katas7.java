@@ -230,10 +230,15 @@ public class Katas7{
         return result;
     }
 
+    public static int roundToNext5(int number) {
+        double tmp = number / 5.0;
+        tmp = Math.ceil(tmp);
+        tmp = tmp * 5;
+        return (int)tmp;
+    }
+
     public static void main(String[] args){
-        String s = switcheroo("acb");
-        
-        System.out.println(s);
+        roundToNext5(-5);
     }
 
     
