@@ -128,6 +128,14 @@ public class Katas8 {
         
     }
 
+    public static boolean checkForFactor(int base, int factor) {
+        // your code here
+        if( base % factor == 0)
+          return true;
+        
+        return false;
+    }
+
     public static void main(String args[]){
         int[] v = {4,2,1,9,3};
         v = squareOrSquareRoot(v);
