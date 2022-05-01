@@ -146,8 +146,23 @@ public class Katas8 {
         return "Position of alphabet: "+index;
     }
 
+    public static String updateLight(String current) {
+
+        if( current == "green")
+            return "yellow";
+
+        if( current == "yellow")
+            return "red";
+
+        if( current == "red")
+            return "green";
+        
+        
+        return "";
+    }
+
     public static void main(String args[]){
        
-        System.out.println(position('z'));
+        System.out.println(updateLight("red"));
     }
 }
