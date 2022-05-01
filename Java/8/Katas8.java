@@ -125,6 +125,8 @@ public class Katas8 {
             return "Overweight";
         if( bmi > 30.0 )
             return "Obese";
+
+        return "";
         
     }
 
@@ -136,9 +138,16 @@ public class Katas8 {
         return false;
     }
 
+    public static String position(char alphabet){
+
+        char c = Character.toLowerCase(alphabet);
+        int index = (int)c - 96;
+        
+        return "Position of alphabet: "+index;
+    }
+
     public static void main(String args[]){
-        int[] v = {4,2,1,9,3};
-        v = squareOrSquareRoot(v);
-        System.out.println(Arrays.toString(v));
+       
+        System.out.println(position('z'));
     }
 }
