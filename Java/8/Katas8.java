@@ -161,8 +161,21 @@ public class Katas8 {
         return "";
     }
 
+    public static int rentalCarCost(int d) {
+        // Your solution here
+        int amount = 40 * d;
+
+        if( d >= 7)
+            amount -= 50;
+
+        else if( d >= 3)
+            amount -= 20;
+
+        return amount;
+    }
+
     public static void main(String args[]){
        
-        System.out.println(updateLight("red"));
+        System.out.println(rentalCarCost(7));
     }
 }
