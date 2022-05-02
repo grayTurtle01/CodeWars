@@ -74,6 +74,8 @@ public class Katas4{
    } 
 
 
+    // Seconds to human parameters time.
+    // seconds --> (years, days, hours, minutes, seconds)
     public static String formatDuration(int seconds) {
 
         if( seconds == 0)
