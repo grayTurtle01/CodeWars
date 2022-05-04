@@ -72,6 +72,21 @@ public class SudokuValidator{
         return true;
     }
 
+    public static int[][] getBlock(int[][] m, int x0, int y0){
+        int[][] block = new int[3][3];
+
+        for(int y = y0; y < y0+3; y++){
+            for(int x = x0; x < x0+3; x++){
+
+                int y_block = y - y0;
+                int x_block = x - x0;
+                
+                block[y_block][x_block] = m[y][x];
+            }
+        }
+
+        return block;
+    }
 
 
 
