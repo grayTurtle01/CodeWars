@@ -56,6 +56,24 @@ public class SudokuValidator{
         return true;
     }
 
+    public static boolean checkBlock(int[][] block){
+        ArrayList<Integer> list = new ArrayList<Integer>();
+
+        for( int y = 0; y < 3; y++){
+            for(int x = 0; x < 3; x++){
+                int value = block[y][x];
+                if( list.contains(value) )
+                    return false;
+
+                list.add(value);
+            }
+        }
+
+        return true;
+    }
+
+
+
 
     public static void main(String[] args){
         System.out.println("Hello Sudoku");
