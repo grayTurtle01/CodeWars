@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+
 public class SudokuValidator{
     
     public static boolean checkLine(int[] line){
@@ -134,10 +138,39 @@ public class SudokuValidator{
         return true;
     }
 
+    public static void main(String args[]){
+        int[] row = {1,2,3,4};
 
+        int[][] m = {
+                      {5, 3, 4, 6, 7, 8, 9, 1, 2},
+                      {6, 7, 2, 1, 9, 5, 3, 4, 8},
+                      {1, 9, 8, 3, 4, 2, 5, 6, 7},
+                      {8, 5, 9, 7, 6, 1, 4, 2, 3},
+                      {4, 2, 6, 8, 5, 3, 7, 9, 1},
+                      {7, 1, 3, 9, 2, 4, 8, 5, 6},
+                      {9, 6, 1, 5, 3, 7, 2, 8, 4},
+                      {2, 8, 7, 4, 1, 9, 6, 3, 5},
+                      {3, 4, 5, 2, 8, 6, 1, 7, 9}
+                      };
 
+        int[] column = getColumn(m, 0);
+        //~ System.out.println(Arrays.toString(column));
+        //~ System.out.println(checkLine(row));
 
-    public static void main(String[] args){
-        System.out.println("Hello Sudoku");
+        //~ checkAllRows(m);
+        //~ checkAllColumns(m);
+
+        //~ int[][] block = getBlock(m, 3, 0);
+        //~ printMatrix(block);
+        //~ System.out.println(checkBlock(block));
+
+        //~ checkAllBlocks(m);
+        check(m);
+        
+            
     }
+    
+
+
+
 }
