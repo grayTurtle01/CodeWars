@@ -28,6 +28,19 @@ public class SudokuValidator{
         return column;
     }
 
+    public static boolean checkAllRows(int[][] m){
+
+        for(int[] row : m){
+            if( checkLine(row) == false ){
+                System.out.println("Wrong Row:");
+                System.out.println(Arrays.toString(row));
+                return false;
+            }
+        }
+
+        return true;
+    }
+
 
     public static void main(String[] args){
         System.out.println("Hello Sudoku");
