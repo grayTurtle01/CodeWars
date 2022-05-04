@@ -41,6 +41,21 @@ public class SudokuValidator{
         return true;
     }
 
+    public static boolean checkAllColumns(int[][] m){
+        int[] column;
+
+        for(int i = 0; i < 9; i++){
+            column = getColumn(m, i);
+            if( checkLine(column) == false ){
+                System.out.println("Wrong Column:");
+                System.out.println(Arrays.toString(column));
+                return false;
+            }
+        }
+
+        return true;
+    }
+
 
     public static void main(String[] args){
         System.out.println("Hello Sudoku");
