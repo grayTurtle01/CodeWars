@@ -88,6 +88,18 @@ public class SudokuValidator{
         return block;
     }
 
+    public static void printMatrix(int[][] m){
+        int n = m.length;
+        
+        for( int y = 0; y < n; y++ ){
+            for( int x = 0; x < n; x++)
+                System.out.print(m[y][x]);
+
+            System.out.println("");
+        }
+    }
+
+
 
 
     public static void main(String[] args){
