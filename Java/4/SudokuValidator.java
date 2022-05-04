@@ -117,6 +117,23 @@ public class SudokuValidator{
         return true;
     }
 
+    public static boolean check(int[][] sudoku) {
+        //do your magic
+        boolean state = true;
+
+        if( checkAllRows(sudoku)  == false )
+            return false;
+
+        if( checkAllColumns(sudoku)  == false )
+            return false;
+
+        if( checkAllBlocks(sudoku)  == false )
+            return false;
+
+        
+        return true;
+    }
+
 
 
 
