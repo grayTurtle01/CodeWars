@@ -99,6 +99,24 @@ public class SudokuValidator{
         }
     }
 
+    public static boolean checkAllBlocks(int[][] m){
+        int[][] block;
+
+        for(int y = 0; y < 9; y += 3){
+            for(int x = 0; x < 9; x+= 3){
+                block = getBlock(m, x, y);
+
+                if( checkBlock(block) == false){
+                    System.out.println("Wrong block: ");
+                    printMatrix(block);
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
 
 
 
