@@ -1,7 +1,7 @@
 # CodeWars ⚔️
 This is a repo for the Solved CodeWars Problems on JavaScript, Python and Java
-```js
-console.log('hello CodeWars')
+```java
+System.out.println('hello CodeWars')
 ```
 
 ## Progress 💪
