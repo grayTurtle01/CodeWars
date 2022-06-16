@@ -7,7 +7,7 @@ function orderWeight(strng) {
     //~ weights.sort()
     console.log(weights)
     
-    weights.sort( (a,b) =>  ( Weight2weight(a) - Weight2weight(b) ) )
+    weights.sort( compare )
     console.log(weights)
 
 
@@ -19,8 +19,23 @@ function orderWeight(strng) {
     
 }
 
+function compare(a,b){
+
+    dx = Weight2weight(a) - Weight2weight(b)
+
+    if( dx < 0)
+        return -1
+    else if( dx > 0)
+        return 1
+    else
+        return 0
+    
+}
+
 
 function Weight2weight(weight_str){
+
+    weight_str = weight_str.trim()
 
     w = 0
     for(digit of weight_str){
@@ -46,4 +61,5 @@ s = ['4', '1', '3', '0', '27', '18',]
 s = ['27','180']
 s.sort()
 //~ console.log(s)
+
 
