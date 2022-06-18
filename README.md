@@ -3,6 +3,9 @@ This is a repo for the Solved CodeWars Problems on JavaScript, Python and Java
 ```js
 console.log("hello JavaScript")
 ```
+```python
+print("Hello Python")
+```
 ```java
 System.out.println('hello CodeWars');
 ```
