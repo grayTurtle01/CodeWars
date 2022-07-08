@@ -1,4 +1,5 @@
-function Encode(str, number){
+
+function encode(str, number){
 
     let str_number = String(number)
     
@@ -19,7 +20,6 @@ function Encode(str, number){
     console.log(result)
 }
 
-
 function letter2num(letter){
     let c = letter.toLowerCase()
 
@@ -29,5 +29,5 @@ function letter2num(letter){
     
 }
 
-Encode('scout', 1939)
-Encode('masterpiece', 1939)
+encode('scout', 1939)
+encode('masterpiece', 1939)
