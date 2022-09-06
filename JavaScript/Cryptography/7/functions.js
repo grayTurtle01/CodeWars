@@ -32,3 +32,24 @@ function rotN_letter(c, delta){
 }
 
 
+function caesar(text, key){
+    let result = ''
+    
+    for( c of text ){
+        
+        if( /[a-zA-Z]/.test(c) ){
+            C = rotN_letter(c, key)
+            result += C
+        }
+        else{
+            result += c
+        }
+    }
+
+    return result
+}
+
+
+for( i = 0; i <= 26; i++)
+    console.log(caesar('ibm', i ))
+
