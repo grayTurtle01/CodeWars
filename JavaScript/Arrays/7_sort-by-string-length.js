@@ -13,4 +13,3 @@ function sortByLength (array) {
 v = ['abc', 'a', 'ab']
 
 console.log( sortByLength(v) )
-console.log(v[0].length)
