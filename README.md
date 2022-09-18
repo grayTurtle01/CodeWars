@@ -16,7 +16,8 @@ System.out.println('hello CodeWars');
 - [x] 6Kyu
 - [x] 5Kyu
 - [x] 4Kyu
-- [ ] 3Kyu
+- [x] 3Kyu
+- [ ] 2Kyu
 
 ## Badges 🦡
 ![Badge](https://www.codewars.com/users/grayTurtle/badges/large)
