@@ -51,5 +51,6 @@ function caesar(text, key){
 
 
 for( i = 0; i <= 26; i++)
-    console.log(caesar('ibm', i ))
+    //~ console.log(i, caesar('platzi', i ))
+    console.log(i, caesar('iztalp', i ))
 

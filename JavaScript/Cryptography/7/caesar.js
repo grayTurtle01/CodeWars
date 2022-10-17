@@ -57,10 +57,12 @@ function decode(num_array, key){
 
 function caesar(str, key){
     encoded_msg =  encode(str, key)
-    console.log(encode_msg)
+    console.log(encoded_msg)
+
+    
         
-    //~ msg = decode(array, key)
-    //~ console.log(msg)
+    msg = decode(encoded_msg, key)
+    console.log(msg)
 }
 
 caesar('ibm', 1)
