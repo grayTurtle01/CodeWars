@@ -1,6 +1,6 @@
 fn main(){
 
-    let mut v = vec![4,1,5,3,6,2,7,8];
+    let mut v = vec![4,1,5,3,6,2];
     println!("{:?}", v);
 
     v = buble_sort(v);
@@ -10,19 +10,21 @@ fn main(){
     println!("{median}");
 }
 
-fn get_median(mut v: Vec<i32> ) -> i32{
+fn get_median(mut v: Vec<i32> ) -> f32{
     v = buble_sort(v);
 
     if v.len() % 2 == 1{
         let mid_index = v.len()/2;
-        return v[mid_index]
+        return v[mid_index] as f32;
     }
     else{
         let right = v.len()/2;
         let left = v.len()/2 - 1;
 
-        let average = (v[left] + v[right])/2;
-        return average
+        let suma = v[left] + v[right];
+        let suma_float = suma as f32;
+        
+        return suma_float/2.0
         
     }
 
